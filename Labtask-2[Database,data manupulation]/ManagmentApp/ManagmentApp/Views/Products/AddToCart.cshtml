@@ -1,0 +1,25 @@
+﻿@model ManagmentApp.Models.Entity.Product
+@{
+    ViewBag.Title = "Cart";
+}
+
+<h2>Cart</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Description</th>
+    </tr>
+    {
+    <tr>
+        <td>@Model.Id</td>
+        <td>@Model.Name</td>
+        <td>@Model.Price</td>
+        <td>@Model.Quantity</td>
+        <td>@Model.Description</td>
+    </tr>
+    }
+</table>
+

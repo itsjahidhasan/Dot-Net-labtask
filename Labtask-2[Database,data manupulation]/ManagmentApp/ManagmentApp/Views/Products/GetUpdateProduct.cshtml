@@ -1,0 +1,16 @@
+﻿@model  ManagmentApp.Models.Entity.Product
+@{
+    ViewBag.Title = "Update Product";
+}
+
+<h2>Update Product</h2>
+
+<form action="~/Products/Update" method="post">
+    ID: <input type="text" name="id" value="@Model.Id" class="form-control" disabled>
+    Name: <input type="text" name="name" value="@Model.Name" class="form-control">
+    Price: <input type="text" name="price" value="@Model.Price" class="form-control">
+    Quantity:<input type="text" name="quantity" value="@Model.Quantity" class="form-control">
+    Description:<input type="text" name="description" value="@Model.Description" class="form-control">
+    <br />
+    <input type="submit" value="Edit" class="btn btn-primary">
+</form>
