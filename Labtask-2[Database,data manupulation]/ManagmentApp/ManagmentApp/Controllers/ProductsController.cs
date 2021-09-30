@@ -13,8 +13,10 @@ namespace ManagmentApp.Controllers
     public class ProductsController : Controller
     {
         // GET: Products
+        
         public ActionResult Index()
         {
+            
             Database db = new Database();
             var Products = db.Products.GetAll();
             return View(Products);

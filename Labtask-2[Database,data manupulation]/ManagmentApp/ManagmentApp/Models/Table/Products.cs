@@ -24,7 +24,7 @@ namespace ManagmentApp.Models.Table
         }
         public Product GetOneProduct(int id)
         {
-            string query = String.Format("select * from Products where Id='{0}'", id);
+            string query = String.Format("select * from Products where Id={0}", id);
             SqlCommand cmd = new SqlCommand(query, conn);
             conn.Open();
             SqlDataReader reader = cmd.ExecuteReader();
@@ -72,10 +72,10 @@ namespace ManagmentApp.Models.Table
         }
         public Product DeleteProduct(int id)
         {
-            string query = String.Format("delete from Products where Id='{0}'", id);
+            string query = String.Format("delete from Products where Id={0}", id);
             SqlCommand cmd = new SqlCommand(query, conn);
             conn.Open();
-            
+            int r = cmd.ExecuteNonQuery();
 
             conn.Close();
             return null;
